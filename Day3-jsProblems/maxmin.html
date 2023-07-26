@@ -80,8 +80,15 @@
       let min = Infinity;
 
       // 함수를 구현하세요!
-
-      
+      for(let num of arr){
+        if(num>max){
+          max = num;
+        }
+        if(num<min){
+          min = num;
+        }
+      }
+      return[min,max];
     }
 
     function submit() {
@@ -93,8 +100,8 @@
       let max = minmax(arr)[1];
 
       // 결과값을 출력해요.
-      document.querySelector("#min").innerText = "최소값: " + min;
       document.querySelector("#max").innerText = "최대값: " + max;
+      document.querySelector("#min").innerText = "최소값: " + min;
     }
     // submitBtn을 클릭하면 submit() 함수가 실행됩니다.
     submitBtn.addEventListener("click", submit);
