@@ -54,14 +54,17 @@
             <p>app.js에 있는 sumAll() 함수를 구현하세요!</p>
           </div>
         </article>
-        <script >
+        <script>
           const input = document.querySelector(".inputN");
           const submitBtn = document.querySelector(".submitBtn");
 
           function sumAll(n) {
             // 1부터 n까지 수를 모두 더하는 함수를 구현하세요!
-            
-            
+            let k=0;
+            for(i=1; i<=n; i++){
+              k += i; //k = k+1
+            }
+           return k; 
           }
 
           // submit 버튼을 누르면 실행될 함수에요.
